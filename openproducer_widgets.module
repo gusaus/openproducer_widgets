@@ -1,0 +1,28 @@
+<?php
+/**
+ * @file
+ * Provides the structure for creating and managing widgets
+ */
+
+include_once 'openproducer_widgets.features.inc';
+
+/** 
+ * Implementation of hook_entity_info_alter()
+ */
+function openproducer_widgets_entity_info_alter(&$entity_info) {
+
+  // widgets
+  $entity_info['fieldable_panels_pane']['bundles']['widgets'] = array(
+    'label' => t('Add widget'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'openproducer_widgets') . '/images/icon/icon-widgets.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/widgets',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+
+}
