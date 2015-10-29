@@ -23,6 +23,6 @@ features[user_permission][] = delete fieldable widgets
 features[user_permission][] = edit fieldable widgets
 features[variable][] = field_bundle_settings_fieldable_panels_pane__widgets
 
-version = "7.x-1.0-beta25"
+version = "7.x-1.0-beta28"
 core = "7.x"
 project = "openproducer_widgets"

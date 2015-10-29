@@ -33,9 +33,10 @@ function openproducer_widgets_field_default_field_instances() {
       'better_formats' => array(
         'allowed_formats' => array(
           'filtered_html' => 0,
-          'full_html' => 'full_html',
+          'full_html' => 0,
           'panopoly_html_text' => 0,
           'panopoly_wysiwyg_text' => 0,
+          'php_code' => 'php_code',
           'plain_text' => 0,
         ),
         'allowed_formats_toggle' => 1,
@@ -54,6 +55,9 @@ function openproducer_widgets_field_default_field_instances() {
             'panopoly_wysiwyg_text' => array(
               'weight' => -10,
             ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
             'plain_text' => array(
               'weight' => 10,
             ),
@@ -61,8 +65,9 @@ function openproducer_widgets_field_default_field_instances() {
         ),
       ),
       'linkit' => array(
+        'button_text' => 'Search',
         'enable' => 0,
-        'insert_plugin' => '',
+        'profile' => '',
       ),
       'text_processing' => 1,
       'user_register_form' => FALSE,
